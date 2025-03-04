@@ -17,7 +17,7 @@
     ```bash
     git clone --depth 1 https://github.com/Gorif12/fabric-num.git /home/gf1/tese-fabric-num/fabric-realty && cd /home/gf1/tese-fabric-num/fabric-realty && find . -name "*.sh" -exec chmod +x {} \;
     ```
-
+    切勿直接复制粘贴/home/gf1/tese-fabric-num/fabric-realty && cd /home/gf1/tese-fabric-num/fabric-realty 代表存储位置并且cd进入，二者前后要一致，根据自己的存储位置就行修改
 2. 一键部署
    ```bash
    ./install.sh
