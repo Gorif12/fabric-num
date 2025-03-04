@@ -14,19 +14,16 @@
 ### 部署步骤
 
 1. 拉取项目并设置权限
-
-   ```bash
-  git clone --depth 1 https://github.com/Gorif12/fabric-num.git /home/gf1/tese-fabric-num/fabric-realty && cd /home/gf1/tese-fabric-num/fabric-realty && find . -name "*.sh" -exec chmod +x {} \;
-   ```
+    ```bash
+    git clone --depth 1 https://github.com/Gorif12/fabric-num.git /home/gf1/tese-fabric-num/fabric-realty && cd /home/gf1/tese-fabric-num/fabric-realty && find . -name "*.sh" -exec chmod +x {} \;
+    ```
 
 2. 一键部署
-
    ```bash
    ./install.sh
    ```
 
 3. 一键卸载
-
    ```bash
    ./uninstall.sh
    ```
