@@ -22,7 +22,7 @@
 1. 拉取项目并设置权限
 
    ```bash
-   git clone --depth 1 https://github.com/togettoyou/fabric-realty.git && cd fabric-realty && find . -name "*.sh" -exec chmod +x {} \;
+   git clone --depth 1 https://github.com/Gorif12/fabric-num.git && cd fabric-realty && find . -name "*.sh" -exec chmod +x {} \;
    ```
 
 2. 一键部署
