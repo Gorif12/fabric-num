@@ -28,7 +28,7 @@ func (h *RealtyAgencyHandler) CreateRealEstate(c *gin.Context) {
 	}
 
 	if err := c.ShouldBindJSON(&req); err != nil {
-		utils.BadRequest(c, "房产信息格式错误")
+		utils.BadRequest(c, "格式错误")
 		return
 	}
 
@@ -38,7 +38,7 @@ func (h *RealtyAgencyHandler) CreateRealEstate(c *gin.Context) {
 		return
 	}
 
-	utils.SuccessWithMessage(c, "房产信息创建成功", nil)
+	utils.SuccessWithMessage(c, "创建成功", nil)
 }
 
 // QueryRealEstate 查询房产信息
