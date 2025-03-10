@@ -1,3 +1,5 @@
+//定义了一个 BankHandler 结构体，它包含四个 HTTP 处理函数，用于处理与银行交易相关的请求。
+////这些函数通过调用 BankService 的方法来执行具体的业务逻辑，并使用 utils 包中的工具函数来处理 HTTP 响应。
 package api
 
 import (
