@@ -1,6 +1,6 @@
 // 随机生成中文姓名
-const lastNames = ['张', '王', '李', '赵', '刘', '陈', '杨', '黄', '周', '吴'];
-const firstNames = ['伟', '芳', '娜', '秀英', '敏', '静', '丽', '强', '磊', '洋', '艳', '勇', '军', '杰', '娟', '涛', '明', '超', '秀兰', '霞'];
+const lastNames = ['张', '高', '李'];
+const firstNames = ['伟', '福', '丽', '秀英', '诺', '静', '朗', '强'];
 
 export const generateRandomName = () => {
   const lastName = lastNames[Math.floor(Math.random() * lastNames.length)];
@@ -9,10 +9,10 @@ export const generateRandomName = () => {
 };
 
 // 随机生成地址
-const cities = ['北京市', '上海市', '广州市', '深圳市', '杭州市', '南京市', '成都市', '武汉市'];
-const districts = ['东城区', '西城区', '朝阳区', '海淀区', '丰台区', '昌平区'];
-const streets = ['长安街', '建国路', '复兴路', '中关村大街', '金融街', '望京街'];
-const communities = ['阳光小区', '和平花园', '翠湖园', '金色家园', '龙湖花园', '碧桂园'];
+const cities = ['北京市', '海口市', '大连市', '深圳市'];
+const districts = ['美兰区', '秀英区', '海甸岛'];
+const streets = ['人民街道', '建国路', '复兴路' , '望京街'];
+const communities = ['海南大学', '海南医科大学', '海南开放大学', '中科院'];
 
 export const generateRandomAddress = () => {
   const city = cities[Math.floor(Math.random() * cities.length)];
