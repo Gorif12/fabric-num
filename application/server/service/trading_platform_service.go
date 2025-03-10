@@ -27,12 +27,12 @@ func (s *TradingPlatformService) QueryRealEstate(id string) (map[string]interfac
 	contract := fabric.GetContract(TRADE_ORG)
 	result, err := contract.EvaluateTransaction("QueryRealEstate", id)
 	if err != nil {
-		return nil, fmt.Errorf("查询房产信息失败：%s", fabric.ExtractErrorMessage(err))
+		return nil, fmt.Errorf("查询信息失败：%s", fabric.ExtractErrorMessage(err))
 	}
 
 	var realEstate map[string]interface{}
 	if err := json.Unmarshal(result, &realEstate); err != nil {
-		return nil, fmt.Errorf("解析房产数据失败：%v", err)
+		return nil, fmt.Errorf("解析数据失败：%v", err)
 	}
 
 	return realEstate, nil
