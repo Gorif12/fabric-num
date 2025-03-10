@@ -1,3 +1,5 @@
+//定义了一个配置模块，用于从 YAML 文件中读取配置信息，并将其存储到全局变量 GlobalConfig 中。
+//配置信息包括服务器配置、Fabric 配置以及组织的详细配置。
 package config
 
 import (
