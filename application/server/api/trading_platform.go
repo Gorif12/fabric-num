@@ -1,3 +1,5 @@
+//这段代码定义了一个 TradingPlatformHandler 结构体，用于处理与交易平台相关的 HTTP 请求。它包含了创建交易、查询房产信息、查询交易信息、分页查询交易列表和分页查询区块列表的方法。
+//每个方法都使用了 Gin 框架来处理 HTTP 请求，并调用了 service 包中的服务来完成具体的业务逻辑。
 package api
 
 import (
@@ -47,7 +49,7 @@ func (h *TradingPlatformHandler) QueryRealEstate(c *gin.Context) {
 	id := c.Param("id")
 	realEstate, err := h.tradingService.QueryRealEstate(id)
 	if err != nil {
-		utils.ServerError(c, "查询房产信息失败："+err.Error())
+		utils.ServerError(c, "查询信息失败："+err.Error())
 		return
 	}
 
