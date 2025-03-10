@@ -36,7 +36,7 @@ func (h *RealtyAgencyHandler) CreateRealEstate(c *gin.Context) {
 
 	err := h.realtyService.CreateRealEstate(req.ID, req.Address, req.Area, req.Owner)
 	if err != nil {
-		utils.ServerError(c, "创建房产信息失败："+err.Error())
+		utils.ServerError(c, "创建信息失败："+err.Error())
 		return
 	}
 
@@ -48,7 +48,7 @@ func (h *RealtyAgencyHandler) QueryRealEstate(c *gin.Context) {
 	id := c.Param("id")
 	realEstate, err := h.realtyService.QueryRealEstate(id)
 	if err != nil {
-		utils.ServerError(c, "查询房产信息失败："+err.Error())
+		utils.ServerError(c, "查询信息失败："+err.Error())
 		return
 	}
 
