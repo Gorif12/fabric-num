@@ -17,7 +17,7 @@ func (s *RealtyAgencyService) CreateRealEstate(id, address string, area float64,
 	now := time.Now().Format(time.RFC3339)
 	_, err := contract.SubmitTransaction("CreateRealEstate", id, address, fmt.Sprintf("%f", area), owner, now)
 	if err != nil {
-		return fmt.Errorf("创建房产信息失败：%s", fabric.ExtractErrorMessage(err))
+		return fmt.Errorf("创建信息失败：%s", fabric.ExtractErrorMessage(err))
 	}
 	return nil
 }
@@ -27,12 +27,12 @@ func (s *RealtyAgencyService) QueryRealEstate(id string) (map[string]interface{}
 	contract := fabric.GetContract(REALTY_ORG)
 	result, err := contract.EvaluateTransaction("QueryRealEstate", id)
 	if err != nil {
-		return nil, fmt.Errorf("查询房产信息失败：%s", fabric.ExtractErrorMessage(err))
+		return nil, fmt.Errorf("查询信息失败：%s", fabric.ExtractErrorMessage(err))
 	}
 
 	var realEstate map[string]interface{}
 	if err := json.Unmarshal(result, &realEstate); err != nil {
-		return nil, fmt.Errorf("解析房产数据失败：%v", err)
+		return nil, fmt.Errorf("解析数据失败：%v", err)
 	}
 
 	return realEstate, nil
@@ -43,7 +43,7 @@ func (s *RealtyAgencyService) QueryRealEstateList(pageSize int32, bookmark strin
 	contract := fabric.GetContract(REALTY_ORG)
 	result, err := contract.EvaluateTransaction("QueryRealEstateList", fmt.Sprintf("%d", pageSize), bookmark, status)
 	if err != nil {
-		return nil, fmt.Errorf("查询房产列表失败：%s", fabric.ExtractErrorMessage(err))
+		return nil, fmt.Errorf("查询列表失败：%s", fabric.ExtractErrorMessage(err))
 	}
 
 	var queryResult map[string]interface{}
